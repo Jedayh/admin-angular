@@ -1,0 +1,45 @@
+<div class="page-content fade-in-up">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="ibox">
+                <div class="ibox-head">
+                    <div class="ibox-title">Ajout utilisateur</div>
+                    <label class="error">{{errorMessage}}</label>
+                    <div class="ibox-tools">
+                        <a class="ibox-collapse"><i class="fa fa-minus"></i></a>
+                    </div>
+                </div>
+                <div class="ibox-body">
+                    <form  [formGroup]="registerForm">
+                        <div class="row">
+                            <div class="col-sm-6 form-group">
+                                <label>Nom de la société</label>
+                                <input class="form-control" type="text" id="society" formControlName="society"   placeholder="Nom de la société">
+                                <input class="form-control" type="hidden" id="uid" formControlName="uid"   value="{{uid}}">
+                            </div>
+                            <div class="col-sm-6 form-group">
+                                <label>Adresse</label>
+                                <input class="form-control" type="text" id="adresse" formControlName="adresse"  placeholder="Adresse">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Adresse Email</label>
+                            <input class="form-control" type="email" id="email" formControlName="email"  placeholder="Email address">
+                        </div>
+                        <div class="form-group">
+                            <label>Mot de Password</label>
+                            <input class="form-control" type="password" id="password" formControlName="password"  placeholder="Mot de Password">
+                        </div>
+                        <div class="form-group">
+                                <label>Role</label>
+                            <input class="form-control" type="text"  formControlName="role" placeholder="Role">
+                        </div>
+                        <div class="form-group">
+                            <button class="btn btn-default" type="submit" [disabled]="!registerForm.valid" (click)="tryRegister(registerForm.value)">Envoyer</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

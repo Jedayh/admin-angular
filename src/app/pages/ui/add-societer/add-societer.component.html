@@ -1,0 +1,43 @@
+<div class="page-content fade-in-up">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="ibox">
+                <div class="ibox-head">
+                    <div class="ibox-title">Ajout Societer</div>
+                    <div class="ibox-tools">
+                        <a class="ibox-collapse"><i class="fa fa-minus"></i></a>
+                    </div>
+                </div>
+                <div class="ibox-body">
+                    <form  [formGroup]="societyForm" *ngIf="uid">
+                        <div class="row">
+                            <div class="col-sm-6 form-group">
+                                <label>Référence Facture</label>
+                                <input class="form-control" type="text" id="invoice_name" formControlName="invoice_name"  placeholder="Référence Facture">
+                            </div>
+                            <div class="col-sm-6 form-group">
+                                <label>Montant</label>
+                                <input class="form-control" id="ammont" type="number" step=0.01 formControlName="ammont"  placeholder="Montant">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Référence Client</label>
+                            <input class="form-control" type="text" id="client_ref" formControlName="client_ref"  placeholder="Référence Client">
+                        </div>
+                        <div class="form-group">
+                            <input class="form-control" type="hidden" id="uid" formControlName="uid">
+                        </div>
+                        <div class="form-group">
+                            <label>Déscription</label>
+                            <textarea class="form-control" id="description" formControlName="description"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <button class="btn btn-default" type="submit" (click)="trySociety(societyForm.value)" [disabled]="!societyForm.valid">Envoyer</button>
+                        </div>
+                    </form>
+                    <ngx-qrcode [qrc-value] = "qrcode"></ngx-qrcode>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

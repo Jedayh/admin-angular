@@ -1,0 +1,29 @@
+<div id="sidebar-collapse">
+    <div class="admin-block d-flex"><!-- 
+        <div>
+            <img src="./assets/img/admin-avatar.png" width="45px" />
+        </div>
+        <br>
+        <br> -->
+        <div class="admin-info"><small class="email_ob">{{email}}</small></div>
+    </div>
+    <ul class="side-menu metismenu">
+        <li>
+            <a routerLinkActive="active" routerLink="/index"><i class="sidebar-item-icon fa fa-th-large"></i>
+                <span class="nav-label">Dashboard</span>
+            </a>
+        </li>
+        <li class="heading">Configuration Utilisateur</li>
+        <li>
+            <a routerLink="/ui/users" routerLinkActive="active"><i class="sidebar-item-icon fa fa-users"></i>
+                <span class="nav-label">Utilisateur</span>
+            </a>
+        </li>
+        <li class="heading">Configuration Société</li>
+        <li>
+            <a routerLink="/ui/societer" routerLinkActive="active"><i class="sidebar-item-icon fa fa-briefcase"></i>
+                <span class="nav-label">Société</span>
+            </a>
+        </li>
+    </ul>
+</div>

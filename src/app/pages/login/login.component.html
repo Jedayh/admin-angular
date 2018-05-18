@@ -1,0 +1,25 @@
+<div class="content">
+    <div class="brand">
+        <a class="link">FINTEK</a>
+    </div>
+    <form [formGroup]="loginForm">
+        <h2 class="login-title">Connexion</h2>
+        <label class="error">{{errorMessage}}</label>
+        <div class="form-group">
+            <div class="input-group-icon right">
+                <div class="input-icon"><i class="fa fa-envelope"></i></div>
+                <input class="form-control" type="email" placeholder="Email" formControlName="email" autocomplete="off">
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="input-group-icon right">
+                <div class="input-icon"><i class="fa fa-lock font-16"></i></div>
+                <input class="form-control" type="password" placeholder="Password" formControlName="password">
+            </div>
+        </div>
+        <div class="form-group">
+            <button class="btn btn-info btn-block" type="submit" [disabled]="!loginForm.valid" (click)="tryLogin(loginForm.value)">Login</button><br>
+            <a routerLink="/register">Register</a>
+        </div>
+    </form>
+</div>

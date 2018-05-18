@@ -1,0 +1,47 @@
+<div class="content">
+    <div class="brand">
+        FINTEK
+    </div>
+    <form [formGroup]="registerUserForm">
+        <h2 class="login-title">S'Enregistrer</h2>
+        <label class="error">{{errorMessage}}</label>
+        <div class="row">
+            <div class="col-6">
+                <div class="form-group">
+                    <input class="form-control" type="text" formControlName="first_name" placeholder="Nom ">
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="form-group">
+                    <input class="form-control" type="text" formControlName="last_name" placeholder="Prénom">
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <input class="form-control" id="society_name" type="text" formControlName="society_name" placeholder="Nom de la société">
+        </div>
+        <div class="form-group">
+            <input class="form-control" id="adresse" type="text" formControlName="adresse" placeholder="Votre Adresse">
+        </div>
+        <div class="form-group">
+            <input class="form-control" type="email" formControlName="email" placeholder="Adresse Email" autocomplete="off">
+        </div>
+        <div class="form-group">
+            <input class="form-control" id="password" type="password" formControlName="password" placeholder="Mot de passe">
+        </div>
+        <div class="form-group">
+            <input class="form-control" type="hidden" formControlName="role">
+        </div>
+        <div class="form-group">
+            <input class="form-control" type="hidden" formControlName="activation">
+        </div>
+        <div class="form-group">
+            <button class="btn btn-info btn-block" type="submit" [disabled]="!registerUserForm.valid" (click)="registerUser(registerUserForm.value)">S'enregistrer</button>
+        </div>
+        <div class="social-auth-hr">
+        </div>
+        <div class="text-center">Déjà membre?
+            <a class="color-blue" routerLink="/login">Connexion</a>
+        </div>
+    </form>
+</div>

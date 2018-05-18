@@ -1,0 +1,49 @@
+<div class="page-content fade-in-up">
+    <div class="ibox">
+        <div class="ibox-head">
+            <div class="row width_d">
+                <div class="col-md-6">
+                    <div class="ibox-head">
+                        <div class="ibox-title">List des Société</div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="ibox-head right-aligne">
+                        <div><a routerLink="/ui/add-societer" class="btn btn-default"><i class="fa fa-plus"> Ajout Société</i></a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="ibox-body">
+            <table class="table table-striped table-bordered table-hover" cellspacing="0" width="100%">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Référence Client</th>
+                        <th>Référence Facture</th>
+                        <th>Montant</th>
+                        <th>QRCode</th>
+                    </tr>
+                </thead>
+                <tfoot>
+                    <tr>
+                        <th>Id</th>
+                        <th>Référence Client</th>
+                        <th>Référence Facture</th>
+                        <th>Montant</th>
+                        <th>QRCode</th>
+                    </tr>
+                </tfoot>
+                <tbody>
+                    <tr *ngFor="let society of societyList; let i = index">
+                        <td>{{i + 1}}</td>
+                        <td>{{society.Ref_client}}</td>
+                        <td>{{society.Ref_facture}}</td>
+                        <td>{{society.Montant}}</td>
+                        <td><ngx-qrcode [qrc-value] = "society.$key"></ngx-qrcode></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

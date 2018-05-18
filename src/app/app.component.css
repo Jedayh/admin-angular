@@ -1,0 +1,41 @@
+.preloader-backdrop {
+    background-color: transparent;
+}
+.page-preloader {
+    background-color: #fff;
+    box-shadow: 0 5px 20px #d6dee4;
+}
+.center{
+	margin: auto;
+    width: 26%;
+    padding: 10px;
+}
+.alert-warning {
+    background-color: #FFF;
+    border-color: transparent;
+    color: #e68f07;
+    font-size: 15px;
+    font-weight: 700;
+    border-left: 5px solid #e68f07;
+}
+.alert-sucess {
+    background-color: #FFF;
+    border-color: transparent;
+    color: #2b542c;
+    font-size: 15px;
+    font-weight: 700;
+    border-left: 5px solid #2b542c;
+}
+.page-sidebar {
+    width: 220px;
+    min-height: 100%;
+    position: absolute;
+    top: 0;
+    margin-top: 36px;
+    transition: all .2s ease-in-out;
+    z-index: 1001;
+}
+.email_ob{
+    font-size: 10px;
+    font-weight: 700;
+}

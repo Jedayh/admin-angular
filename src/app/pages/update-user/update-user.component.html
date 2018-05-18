@@ -1,0 +1,25 @@
+<form #authForm="ngForm" (ngSubmit)="onSubmit(authForm)" class="form-user">
+    <input type="hidden" name="$key" #$key="ngModel" [(ngModel)]="authService.selectedUser.$key">
+    <input type="hidden" name="$userId" #$userId="ngModel" [(ngModel)]="authService.selectedUser.$userId">
+  <div class="form-group">
+    <label>role</label>
+    <input class="form-control" name="role" #role="ngModel" [(ngModel)]="authService.selectedUser.role">
+  </div>
+ <!--  <div class="form-group">
+    <label>activation <span class="smalls">(on/off)</span></label>
+    <input class="form-control" name="activation" #activation="ngModel" [(ngModel)]="authService.selectedUser.activation">
+  </div> -->
+  <div class="onoffswitch4">
+    <input type="checkbox" name="activation" #activation="ngModel" [(ngModel)]="authService.selectedUser.activation" class="onoffswitch4-checkbox" id="myonoffswitch4" checked>
+    <label class="onoffswitch4-label" for="myonoffswitch4">
+        <span class="onoffswitch4-inner"></span>
+        <span class="onoffswitch4-switch"></span>
+    </label>
+  </div>
+  <br>
+  <div class="form-group">
+    <button class="btn btn-default" type="submit">
+      <i class="fa fa-floppy-o"></i>
+       Submit</button>
+  </div>
+</form>
